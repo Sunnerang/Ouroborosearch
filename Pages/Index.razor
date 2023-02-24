@@ -5,6 +5,9 @@
 @using System.Threading.Tasks;
 @using System.Collections.Generic;
 @using Microsoft.EntityFrameworkCore;
+@using System.Net.Http.Json;
+
+
 
 <div class="container">
     <div class="row">
@@ -47,27 +50,19 @@
     private ElementReference Syas;
     private List<Search>? Back {get;set;}
     private Search? Forth {get;set;}
-
+    static HttpClient client = new HttpClient();
     private async Task BackAndForth(){
         Back = new();
-        //Forth = new();
-        using var context = new SearchContext();
-        try{
-            Back = await context.SearchSet.Where(s => s.SearchString.Contains(Forth.SearchString)).ToListAsync();
-            StateHasChanged();
-            Console.WriteLine("Back got back");
+
+        HttpResponseMessage first = await client.GetAsync($"https://ouroborosearchapi.azurewebsites.net/api/Search/{Forth.SearchString}");
+        if(first.IsSuccessStatusCode)
+        {
+            Back = await first.Content.ReadFromJsonAsync<List<Search>>();
         }
-        catch{
-            Console.WriteLine("Back could not get back");
-        }
-        try{
-            await context.AddAsync(Forth);
-            await context.SaveChangesAsync();
-            Console.WriteLine("Forth went forth");
-        }
-        catch{
-            Console.WriteLine("Forth could not go forth");
-        }
+        
+        HttpResponseMessage other = await client.PostAsJsonAsync("https://ouroborosearchapi.azurewebsites.net/api/Search", Forth);
+        other.EnsureSuccessStatusCode();
+
         Forth = new Search();
     }
 
@@ -77,6 +72,19 @@
     }
     
 }
+
+    
+        
+            
+
+        
+        
+
+        
+
+    
+        
+
 
 
             
