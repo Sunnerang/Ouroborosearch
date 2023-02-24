@@ -6,17 +6,33 @@
 
 main {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color:rgb(111, 178, 253);
+    color:rgb(197, 234, 255);
     flex: 1;
+    min-height: 100vh;
+}
+
+#logindisplay{
+    text-align: right;
+    font-size: smaller;
+    padding: 1em;
+}
+
+#footerdisplay{
+    text-align: left;
+    font-size: xx-small;
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    margin-top: 4em;
 }
 
 .sidebar {
-    background-image: linear-gradient(rgb(7, 17, 13), rgb(64, 101, 145));
+    background-image: linear-gradient(rgb(7, 17, 13), rgb(197, 234, 255));
 }
 
 .top-row {
     background-color: rgb(7, 17, 13);
-    border-bottom: 1px solid rgb(111, 178, 253);
+    border-bottom: 1px solid rgb(197, 234, 255);
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Id": "C:\\Users\\sunne\\Desktop\\Ouroborosearch\\wwwroot\\css\\favicon.png",
+      "PackagePath": "staticwebassets\\css\\favicon.png"
+    },
+    {
       "Id": "C:\\Users\\sunne\\Desktop\\Ouroborosearch\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
@@ -51,10 +55,6 @@
     {
       "Id": "C:\\Users\\sunne\\Desktop\\Ouroborosearch\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
-      "Id": "C:\\Users\\sunne\\Desktop\\Ouroborosearch\\wwwroot\\favicon.png",
-      "PackagePath": "staticwebassets\\favicon.png"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Ouroborosearch.Microsoft.AspNetCore.StaticWebAssets.props",

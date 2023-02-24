@@ -87,6 +87,43 @@
         }
       },
       {
+        "HashCode": -336997761,
+        "Kind": "Components.Component",
+        "Name": "Ouroborosearch.App",
+        "AssemblyName": "Ouroborosearch",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Ouroborosearch.App",
+          "Common.TypeNamespace": "Ouroborosearch",
+          "Common.TypeNameIdentifier": "App"
+        }
+      },
+      {
+        "HashCode": -700053340,
+        "Kind": "Components.Component",
+        "Name": "Ouroborosearch.App",
+        "AssemblyName": "Ouroborosearch",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Ouroborosearch.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Ouroborosearch.App",
+          "Common.TypeNamespace": "Ouroborosearch",
+          "Common.TypeNameIdentifier": "App",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1296709161,
         "Kind": "Components.Component",
         "Name": "Ouroborosearch.Shared.LoginDisplay",
@@ -226,43 +263,6 @@
           "Common.TypeNamespace": "Ouroborosearch.Shared",
           "Common.TypeNameIdentifier": "MainLayout",
           "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -336997761,
-        "Kind": "Components.Component",
-        "Name": "Ouroborosearch.App",
-        "AssemblyName": "Ouroborosearch",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Ouroborosearch.App",
-          "Common.TypeNamespace": "Ouroborosearch",
-          "Common.TypeNameIdentifier": "App"
-        }
-      },
-      {
-        "HashCode": -700053340,
-        "Kind": "Components.Component",
-        "Name": "Ouroborosearch.App",
-        "AssemblyName": "Ouroborosearch",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Ouroborosearch.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Ouroborosearch.App",
-          "Common.TypeNamespace": "Ouroborosearch",
-          "Common.TypeNameIdentifier": "App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

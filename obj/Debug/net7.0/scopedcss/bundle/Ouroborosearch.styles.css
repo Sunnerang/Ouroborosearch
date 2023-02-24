@@ -6,16 +6,34 @@
 }
 
 main[b-21dvl89cfc] {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color:rgb(197, 234, 255);
     flex: 1;
+    min-height: 100vh;
+}
+
+#logindisplay[b-21dvl89cfc]{
+    text-align: right;
+    font-size: smaller;
+    padding: 1em;
+}
+
+#footerdisplay[b-21dvl89cfc]{
+    text-align: left;
+    font-size: xx-small;
+    padding: 1em;
+    position: absolute;
+    bottom: 0;
+    margin-top: 4em;
 }
 
 .sidebar[b-21dvl89cfc] {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-image: linear-gradient(rgb(7, 17, 13), rgb(197, 234, 255));
 }
 
 .top-row[b-21dvl89cfc] {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
+    background-color: rgb(7, 17, 13);
+    border-bottom: 1px solid rgb(197, 234, 255);
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
@@ -67,74 +85,5 @@ main[b-21dvl89cfc] {
     .top-row[b-21dvl89cfc], article[b-21dvl89cfc] {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
-    }
-}
-/* _content/Ouroborosearch/Shared/NavMenu.razor.rz.scp.css */
-.navbar-toggler[b-wjxmxchloh] {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.top-row[b-wjxmxchloh] {
-    height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.navbar-brand[b-wjxmxchloh] {
-    font-size: 1.1rem;
-}
-
-.oi[b-wjxmxchloh] {
-    width: 2rem;
-    font-size: 1.1rem;
-    vertical-align: text-top;
-    top: -2px;
-}
-
-.nav-item[b-wjxmxchloh] {
-    font-size: 0.9rem;
-    padding-bottom: 0.5rem;
-}
-
-    .nav-item:first-of-type[b-wjxmxchloh] {
-        padding-top: 1rem;
-    }
-
-    .nav-item:last-of-type[b-wjxmxchloh] {
-        padding-bottom: 1rem;
-    }
-
-    .nav-item[b-wjxmxchloh]  a {
-        color: #d7d7d7;
-        border-radius: 4px;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        line-height: 3rem;
-    }
-
-.nav-item[b-wjxmxchloh]  a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
-}
-
-.nav-item[b-wjxmxchloh]  a:hover {
-    background-color: rgba(255,255,255,0.1);
-    color: white;
-}
-
-@media (min-width: 641px) {
-    .navbar-toggler[b-wjxmxchloh] {
-        display: none;
-    }
-
-    .collapse[b-wjxmxchloh] {
-        /* Never collapse the sidebar for wide screens */
-        display: block;
-    }
-    
-    .nav-scrollable[b-wjxmxchloh] {
-        /* Allow sidebar to scroll for tall menus */
-        height: calc(100vh - 3.5rem);
-        overflow-y: auto;
     }
 }
