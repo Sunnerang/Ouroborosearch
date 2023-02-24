@@ -1,0 +1,95 @@
+﻿@page "/"
+
+@using System;
+@using System.Linq;
+@using System.Threading.Tasks;
+@using System.Collections.Generic;
+@using Microsoft.EntityFrameworkCore;
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="ouroborosearch">
+                Ouroborosearch
+            </div>
+
+        </div>
+        <div class="col-sm-8">
+            
+            <div class="forth">
+                <EditForm Model="@Forth" OnValidSubmit="@BackAndForth">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+
+                    <InputText tabindex="1" id="syas" @bind-Value="@Forth.SearchString"></InputText>
+                </EditForm>
+            </div>
+
+            <div class="back">
+                <Virtualize Items="@Back" Context="back">
+                    <div class="backbone">
+                        <div>
+                            <p>@back.SearchString</p>
+                        </div>
+                    </div>
+                </Virtualize>
+            </div>
+
+        </div>
+        <div class="col-sm-2">
+            <div class="ouroborosearch">
+                Account
+            </div>
+        </div>
+    </div>
+</div>
+                
+
+@code{
+
+    private ElementReference Syas;
+    private List<Search>? Back {get;set;}
+    private Search? Forth {get;set;}
+
+    private async Task BackAndForth(){
+        Back = new();
+        //Forth = new();
+        using var context = new SearchContext();
+        try{
+            Back = await context.SearchSet.Where(s => s.SearchString.Contains(Forth.SearchString)).ToListAsync();
+            StateHasChanged();
+            Console.WriteLine("Back got back");
+        }
+        catch{
+            Console.WriteLine("Back could not get back");
+        }
+        try{
+            await context.AddAsync(Forth);
+            await context.SaveChangesAsync();
+            Console.WriteLine("Forth went forth");
+        }
+        catch{
+            Console.WriteLine("Forth could not go forth");
+        }
+        Forth = new Search();
+    }
+
+    protected override async Task OnInitializedAsync(){
+        Back = new List<Search>();
+        Forth = new Search();
+    }
+    
+}
+
+
+            
+
+
+                    
+
+
+    
+        
+
+
+
